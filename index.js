@@ -21,8 +21,8 @@ const getPuppyData = async () => {
     const data = await response.json();
     console.log(data);
 
-    const allPuppies = data.results; // Assuming the puppies are under `results` in the response
-    state.everyPuppy = allPuppies;  // Update state with the list of puppies
+    const allPuppies = data.results; 
+    state.everyPuppy = allPuppies; 
 
     displayPuppies(); // Function to render the puppies on the page
   } catch (error) {
@@ -78,10 +78,11 @@ function backToRoster() {
   displayPuppies();  // Go back to the list of puppies
 }
 
-// Function to get the details of a puppy (You need to implement this based on the API response)
+// Function to get the details of a puppy
 const getPuppyDetails = async (id) => {
   try {
-    const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/${cohort}/players/${id}`);
+    const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2410-FTB-MT-WEB-PT/players
+`);
     const data = await response.json();
     return data;  // Return the puppy details object
   } catch (error) {
